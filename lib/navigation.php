@@ -15,7 +15,7 @@ add_action('init', 'h5bs_register_menus');
 function h5bs_primary_nav()
 {
   wp_nav_menu([
-    'container'       => false,                        // remove nav container
+    'container'       => 'nav',                        // remove nav container
     'menu'            => 'Primary Nav',                // nav name
     'menu_id'         => 'nav-main',                   // custom id
     'menu_class'      => 'nav-main navbar-nav',        // custom class
@@ -61,7 +61,7 @@ function h5bs_footer_nav()
     'after'           => '',                           // after the menu
     'link_before'     => '',                           // before each link
     'link_after'      => '',                           // after each link
-    'depth'           => 0,                            // set to 1 to disable dropdowns
+    'depth'           => 3,                            // set to 1 to disable dropdowns
     'fallback_cb'     => '__return_false'              // fallback function
   ]);
 }
